@@ -1,6 +1,6 @@
 # 品質檢核報告
 
-檢核日期：2026-08-01　版本：v1.1.0
+檢核日期：2026-08-01　版本：v1.1.1
 
 ## 自動建置
 
@@ -37,6 +37,13 @@
 - 頁籤使用 `tablist`／`tab`／`tabpanel`、方向鍵、Home、End 鍵操作。
 - 動畫提供播放、暫停、重播，並支援 `prefers-reduced-motion`。
 - 色彩之外另有文字、數值、符號與標籤表意。
+
+## 社群分享預覽
+
+- `social-preview.png` 為 1200×630 RGB PNG，使用專案自有 Image 2.0 主視覺重新構圖。
+- 本機圖片請求回傳 HTTP 200、`image/png`，檔案大小 589,296 bytes。
+- Open Graph 包含 type、URL、title、description、image、尺寸與替代文字；Twitter Card 使用 `summary_large_image`。
+- 1440×1000 瀏覽器檢查：頁面有內容、無錯誤覆蓋層、無 JavaScript 錯誤，頁尾顯示 v1.1.1。
 
 ## 內容與安全
 

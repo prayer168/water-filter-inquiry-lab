@@ -4,7 +4,7 @@
 
 - 教材網站：https://prayer168.github.io/water-filter-inquiry-lab/
 - 原始碼：https://github.com/prayer168/water-filter-inquiry-lab
-- 版本：v1.1.0
+- 版本：v1.1.1
 
 ## 學習目標
 

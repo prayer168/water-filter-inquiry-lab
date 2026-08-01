@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1] - 2026-08-01
+
+- 新增 1200×630 Facebook 連結預覽縮圖與完整 Open Graph／Twitter Card metadata。
+- 更新可直接分享的繁體中文與英文 Facebook 貼文。
+
 ## [1.1.0] - 2026-08-01
 
 - 將六則生活應用的 SVG 圖示改為 Image 2.0 原創寫實情境圖。
