@@ -3,10 +3,235 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>自製濾水器探究</title>
+  <meta name="description" content="以沉澱、篩濾與吸附為核心，設計、測試並改良自製濾水器的國中小互動探究教材。">
+  <meta name="theme-color" content="#102a23">
+  <title>自製濾水器探究｜Water Filter Inquiry Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <main><h1>自製濾水器探究</h1><p>互動教材建置中。</p></main>
+  <a class="skip-link" href="#lesson">跳到主要教材</a>
+  <header class="site-header">
+    <a class="brand" href="#lesson" aria-label="回到自製濾水器探究首頁">
+      <span class="brand-mark" aria-hidden="true">WF</span>
+      <span><strong>自製濾水器</strong><small>探究實驗室</small></span>
+    </a>
+    <div class="progress-wrap" aria-label="學習進度">
+      <span id="progressText">0 / 8 完成</span>
+      <div class="progress-track"><span id="progressBar"></span></div>
+    </div>
+    <button class="safety-pill" data-go="mission">⚠ 不可飲用</button>
+  </header>
+
+  <nav class="tab-shell" aria-label="教材章節">
+    <div class="tabs" role="tablist" aria-label="自製濾水器探究頁籤">
+      <button role="tab" id="tab-mission" aria-controls="panel-mission" aria-selected="true" tabindex="0" data-tab="mission"><span>00</span>任務基地</button>
+      <button role="tab" id="tab-principles" aria-controls="panel-principles" aria-selected="false" tabindex="-1" data-tab="principles"><span>01</span>原理探索</button>
+      <button role="tab" id="tab-materials" aria-controls="panel-materials" aria-selected="false" tabindex="-1" data-tab="materials"><span>02</span>濾材圖鑑</button>
+      <button role="tab" id="tab-design" aria-controls="panel-design" aria-selected="false" tabindex="-1" data-tab="design"><span>03</span>配置實驗</button>
+      <button role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false" tabindex="-1" data-tab="evidence"><span>04</span>證據紀錄</button>
+      <button role="tab" id="tab-applications" aria-controls="panel-applications" aria-selected="false" tabindex="-1" data-tab="applications"><span>05</span>生活應用</button>
+      <button role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1" data-tab="quiz"><span>06</span>闖關挑戰</button>
+      <button role="tab" id="tab-resources" aria-controls="panel-resources" aria-selected="false" tabindex="-1" data-tab="resources"><span>07</span>自主學習</button>
+    </div>
+  </nav>
+
+  <main id="lesson">
+    <section class="tab-panel is-active" id="panel-mission" role="tabpanel" aria-labelledby="tab-mission" tabindex="0">
+      <div class="hero">
+        <img src="assets/images/hero-lab.webp" alt="教師陪同兩名戴護目鏡的學生觀察裝有砂、礫石與碳材的倒置瓶濾水器，桌上有混濁水樣與仍略混濁的出水" width="1536" height="1024" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="hero-copy wrap">
+          <p class="eyebrow">WATER FILTER INQUIRY LAB · TAIWAN</p>
+          <h1>把泥水變清，<br><em>不等於把水變安全。</em></h1>
+          <p>你的任務不是做出「神奇濾水器」，而是用公平測試找出：不同材料、順序與厚度，怎麼改變清澈度、流速、成本與操作難度。</p>
+          <div class="hero-actions">
+            <button class="button primary" data-go="principles">開始探究</button>
+            <button class="button ghost" id="openSafety">先讀安全契約</button>
+          </div>
+        </div>
+        <div class="hero-facts" aria-label="三個核心任務">
+          <p><b>01</b><span>看見顆粒<br>如何被留下</span></p>
+          <p><b>02</b><span>測量清澈<br>速度與成本</span></p>
+          <p><b>03</b><span>用證據改良<br>不靠直覺猜</span></p>
+        </div>
+      </div>
+
+      <div class="wrap mission-grid">
+        <article class="brief-card">
+          <p class="kicker">MISSION BRIEF</p>
+          <h2>一場沒有唯一答案的工程挑戰</h2>
+          <p>「最好」必須先說清楚判準。最清澈的配置可能最慢；最快的配置可能攔不住細泥；材料最多也不一定最划算。你要提出可測試問題，取得重複證據，再為自己的設計辯護。</p>
+          <ul class="check-list">
+            <li>我能解釋沉澱、篩濾、吸附。</li>
+            <li>我能一次只改變一個主要變因。</li>
+            <li>我能分開寫觀察、證據、推論。</li>
+          </ul>
+        </article>
+        <aside class="safety-card" id="safetyContract">
+          <p class="kicker">SAFETY CONTRACT</p>
+          <h2>所有實驗水，一律不入口</h2>
+          <ul>
+            <li><strong>不喝、不舔、不試味。</strong>外觀與氣味都不能證明安全。</li>
+            <li>只用清水、乾淨園藝土、落葉碎屑與最多 1 滴食用色素製作模擬污水。</li>
+            <li>成人負責切割寶特瓶並包覆銳邊；學生戴護目鏡、在托盤上操作。</li>
+            <li>不使用池塘水、污水、糞便、清潔劑、油、重金屬或未知化學品。</li>
+          </ul>
+          <label class="contract-check"><input type="checkbox" id="safetyCheck"> <span>我知道：過濾後的水仍不可飲用。</span></label>
+        </aside>
+      </div>
+
+      <div class="wrap process-map" aria-labelledby="mapTitle">
+        <div class="section-head"><div><p class="section-number">FIELD MAP</p><h2 id="mapTitle">探究路線圖</h2></div><p>先建立模型，再動手；先量測，再下結論。</p></div>
+        <ol>
+          <li><b>問</b><span>選一個可測試問題</span></li>
+          <li><b>猜</b><span>寫出有理由的預測</span></li>
+          <li><b>做</b><span>控制變因測試三次</span></li>
+          <li><b>量</b><span>清澈、時間、出水量</span></li>
+          <li><b>證</b><span>分開觀察與推論</span></li>
+          <li><b>改</b><span>一次改良一個重點</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-principles" role="tabpanel" aria-labelledby="tab-principles" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">01 · HOW IT WORKS</p><h2>水變清澈，發生了什麼？</h2></div><p>點選三個階段，觀察污染物停在哪裡。動畫中的顆粒代表「可見或懸浮物模型」，不是依比例畫出的細菌或分子。</p></div>
+        <div class="principle-layout">
+          <div class="principle-controls" id="principleControls" role="group" aria-label="選擇濾水原理"></div>
+          <div class="principle-stage">
+            <svg id="principleSvg" viewBox="0 0 760 430" role="img" aria-labelledby="principleVisualTitle principleVisualDesc">
+              <title id="principleVisualTitle">沉澱、篩濾與吸附互動圖解</title>
+              <desc id="principleVisualDesc">水中大顆粒先沉降，剩餘懸浮物被砂層攔截，部分分子附著於活性碳多孔表面。</desc>
+              <defs>
+                <linearGradient id="waterGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ec5c3" stop-opacity=".48"/><stop offset="1" stop-color="#4f8582" stop-opacity=".7"/></linearGradient>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#d8a351"/></marker>
+              </defs>
+              <rect x="35" y="40" width="200" height="330" rx="28" class="tank"/>
+              <path d="M55 115 H215 V350 H55 Z" fill="url(#waterGradient)"/>
+              <g id="settlingParticles"></g>
+              <path d="M250 205 H320" class="flow-arrow" marker-end="url(#arrow)"/>
+              <path d="M335 55 H525 L500 370 H360 Z" class="column"/>
+              <g id="filterLayers"></g>
+              <g id="filterParticles"></g>
+              <path d="M535 205 H600" class="flow-arrow" marker-end="url(#arrow)"/>
+              <circle cx="664" cy="212" r="70" class="carbon-grain"/>
+              <g id="carbonPores"></g>
+              <g id="molecules"></g>
+              <text x="135" y="400" text-anchor="middle">沉澱槽</text>
+              <text x="430" y="400" text-anchor="middle">濾材層</text>
+              <text x="664" y="310" text-anchor="middle">活性碳表面（放大模型）</text>
+            </svg>
+            <div class="stage-readout" aria-live="polite"><p class="kicker" id="principleEnglish"></p><h3 id="principleName"></h3><p id="principleSummary"></p></div>
+            <div class="animation-controls"><button id="playPrinciple">▶ 播放</button><button id="pausePrinciple">Ⅱ 暫停</button><button id="resetPrinciple">↺ 重播</button></div>
+          </div>
+        </div>
+        <div class="can-cannot"><article><span>能觀察到</span><p id="principleCan"></p></article><article><span>不能據此證明</span><p id="principleCannot"></p></article></div>
+        <aside class="evidence-band"><strong>證據邊界</strong><p>濁度是光被顆粒散射所形成的相對清澈程度。濁度下降是有用證據，但不是病原體、鹽類、農藥或重金屬檢驗。</p><a href="https://www.usgs.gov/water-science-school/science/turbidity-and-water" target="_blank" rel="noopener">查看 USGS 濁度說明 ↗</a></aside>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-materials" role="tabpanel" aria-labelledby="tab-materials" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">02 · MEDIA ATLAS</p><h2>十種濾材，不是十種魔法</h2></div><p>點選材料查看粒徑、孔隙、主要作用與限制。分數是課堂比較起點，實際結果仍要由你的材料與數據決定。</p></div>
+        <figure class="editorial-image"><img src="assets/images/filter-media-atlas.webp" alt="俯視木桌上的十個玻璃皿，分別放置石頭、礫石、粗砂、細砂、棉花、不織布、咖啡濾紙、海綿、木炭與顆粒活性碳" width="1536" height="1024" loading="lazy"><figcaption>Image 2.0 原創濾材圖鑑情境。實驗前應把砂、礫石與活性碳分別沖洗，避免材料粉塵干擾結果。</figcaption></figure>
+        <div class="atlas-toolbar">
+          <label>排序方式 <select id="materialSort"><option value="default">由粗到細／類型</option><option value="clarity">預期清澈度</option><option value="flow">預期流速</option><option value="cost">成本由低到高</option></select></label>
+          <label class="search-field">搜尋濾材 <input id="materialSearch" type="search" placeholder="例如：砂、碳、纖維"></label>
+        </div>
+        <div class="material-grid" id="materialGrid"></div>
+        <div class="table-scroll"><table class="material-table"><caption>濾材特性完整比較表</caption><thead><tr><th>濾材</th><th>尺度／孔隙</th><th>主要作用</th><th>優點</th><th>限制與問題</th></tr></thead><tbody id="materialTable"></tbody></table></div>
+        <aside class="myth"><b>關鍵辨識</b><span><strong>一般木炭 ≠ 顆粒活性碳。</strong>活性碳經處理形成更大的多孔表面；兩者可作比較變因，但不可直接互換名稱或效果。</span></aside>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-design" role="tabpanel" aria-labelledby="tab-design" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">03 · BUILD & PREDICT</p><h2>排列濾層，先預測再驗證</h2></div><p>模型分數只呈現常見取捨，不是真實測量。請把模擬器當成形成假設的工具，再用實驗數據修正它。</p></div>
+        <div class="builder-layout">
+          <aside class="builder-controls">
+            <fieldset><legend>水流方向</legend><label><input type="radio" name="direction" value="down" checked> 由上往下（建議）</label><label><input type="radio" name="direction" value="up"> 由下往上（教師延伸）</label></fieldset>
+            <label>選擇範例配置<select id="presetSelect"><option value="starter">建議起始組</option><option value="fast">快速通水組</option><option value="fine">細緻慢流組</option><option value="control">空瓶對照組</option></select></label>
+            <div id="layerEditor" class="layer-editor" aria-label="濾材層編輯器"></div>
+            <button class="button small" id="resetBuilder">恢復建議起點</button>
+          </aside>
+          <div class="filter-rig">
+            <div class="flow-label" id="flowLabel">進水 ↓</div>
+            <div class="bottle" id="bottleLayers" aria-label="濾材配置圖"></div>
+            <div class="collection"><span class="drop"></span><div class="beaker"><span></span></div></div>
+            <p class="model-note">示意模型｜實驗水不可飲用</p>
+          </div>
+          <aside class="prediction-panel" aria-live="polite">
+            <p class="kicker">MODEL PREDICTION</p><h3 id="presetName">建議起始組</h3><p id="presetWhy"></p>
+            <div class="metric"><span>清澈度潛力</span><div><i id="clarityMeter"></i></div><b id="clarityValue"></b></div>
+            <div class="metric"><span>流速潛力</span><div><i id="speedMeter"></i></div><b id="speedValue"></b></div>
+            <div class="metric"><span>材料成本</span><div><i id="costMeter"></i></div><b id="costValue"></b></div>
+            <div class="metric"><span>操作難度</span><div><i id="difficultyMeter"></i></div><b id="difficultyValue"></b></div>
+            <div class="tradeoff" id="tradeoffText"></div>
+          </aside>
+        </div>
+        <div class="flow-comparison"><article><p class="kicker">DOWNFLOW</p><h3>水從上往下</h3><p>課堂倒置瓶容易製作。建議以進水端的較粗材料分散水流，再進入較細材料；出口用濾紙固定並攔截碳粉。濾層過細或壓太緊會變慢。</p></article><article><p class="kicker">UPFLOW</p><h3>水從下往上</h3><p>沿流向仍可先粗後細，但需要配水、支撐與防止細砂被沖起的結構。簡單開口瓶不適合自行改成加壓上行裝置；專業上行濾池不可只靠把瓶子翻過來模擬。</p></article></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">04 · FAIR TEST</p><h2>你的結論，經得起公平比較嗎？</h2></div><p>同批污水、同款容器、同樣體積與倒水方式；一次只改一個主要條件，每個配置至少測三次。</p></div>
+        <figure class="editorial-image editorial-split"><img src="assets/images/evidence-comparison.webp" alt="教師陪同三名戴護目鏡的學生，用黑白清澈度圖卡、秒錶與量筒比較三杯不同混濁程度的水樣" width="1536" height="1024" loading="lazy"><figcaption>用相同容器、背景、光線與水深比較，才有意義。圖卡讀值是課堂相對尺度，不是飲用水檢驗。</figcaption></figure>
+        <div class="question-cards">
+          <article><span>研究 A</span><h3>濾材順序會不會影響效果？</h3><p><b>自變因：</b>排列順序<br><b>應變因：</b>清澈度、時間、出水量<br><b>控制：</b>材料量、瓶型、污水、倒水方式</p></article>
+          <article><span>研究 B</span><h3>細砂厚度會不會影響清澈度與流速？</h3><p><b>自變因：</b>細砂厚度<br><b>應變因：</b>清澈度、時間、出水量<br><b>控制：</b>其他濾層、瓶型、污水</p></article>
+          <article><span>研究 C</span><h3>一般木炭與顆粒活性碳有何差異？</h3><p><b>自變因：</b>碳材種類<br><b>應變因：</b>顏色、碳粉、流速<br><b>控制：</b>粒徑、厚度、預洗、污水</p></article>
+        </div>
+        <div class="evidence-grid">
+          <article class="recipe-card"><p class="kicker">SAFE SIMULATED WATER</p><h3>安全模擬污水｜每組 600 mL</h3><ul><li>自來水 600 mL</li><li>乾淨園藝土 2 平茶匙</li><li>洗淨、剪碎乾燥落葉 1 小撮</li><li>黑胡椒 1/8 茶匙（選用）</li><li>食用色素 1 滴（選用）</li></ul><p class="warning-line">禁用：真實污水、池塘水、油、清潔劑、病原體、重金屬與未知化學物。</p></article>
+          <article class="clarity-lab"><p class="kicker">DIY CLARITY SCALE</p><h3>自製清澈度尺</h3><div class="clarity-demo"><div class="clarity-target" aria-hidden="true"></div><div class="sample-overlay" id="sampleOverlay"></div></div><label>模擬濁度 <input type="range" id="turbiditySlider" min="0" max="100" value="62"><output id="turbidityOutput">62</output></label><p id="clarityGuide">圖樣只看得出明暗，記為 1 級。</p><small>0＝完全看不見；5＝非常清楚。這不是 NTU，也不能判斷可飲用。</small></article>
+        </div>
+        <div class="record-head"><div><p class="section-number">DATA TABLE</p><h2>三次重複，才看得見穩定性</h2></div><button class="button small" id="downloadCsv">下載空白紀錄 CSV</button></div>
+        <div class="table-scroll"><table class="record-table"><thead><tr><th>配置</th><th>次數</th><th>清澈度 0–5</th><th>顏色 0–5</th><th>氣味 0–3</th><th>100 mL 時間（秒）</th><th>5 分鐘出水量（mL）</th><th>成本（點）</th></tr></thead><tbody id="recordRows"></tbody></table></div>
+        <div class="reasoning-frame"><label><span>觀察結果（看到／量到什麼）</span><textarea id="observationText" placeholder="例：A 組三次都比 B 組更容易看清圖卡，但出水較慢。"></textarea></label><label><span>科學證據（用哪些數據支持）</span><textarea id="evidenceText" placeholder="例：A 組清澈度平均 4.0，B 組 2.7；A 組平均多花 46 秒。"></textarea></label><label><span>推論（證據表示什麼，限制是什麼）</span><textarea id="inferenceText" placeholder="例：在本次材料與水樣下，增加細砂可能提升清澈度但降低流速；不能推論水已可飲用。"></textarea></label></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-applications" role="tabpanel" aria-labelledby="tab-applications" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">05 · REAL WORLD</p><h2>同樣叫「過濾」，任務並不相同</h2></div><p>從自來水廠到咖啡濾紙，材料與目標不同。請找出每個情境借用了哪個原理，以及不能直接類推之處。</p></div>
+        <div class="application-grid" id="applicationGrid"></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" tabindex="0" hidden>
+      <div class="wrap lesson-section quiz-shell">
+        <div class="section-head"><div><p class="section-number">06 · FIELD CHECK</p><h2>闖關挑戰</h2></div><p>10 題不只考名詞。你要判斷安全、辨識公平測試，並解讀清澈度與流速的取捨。</p></div>
+        <div id="quizIntro" class="quiz-intro"><div class="score-orbit"><span>10</span><small>QUESTIONS</small></div><div><h3>準備好用證據說話了嗎？</h3><p>每題作答後立即看解析，也能回到對應教材複習。完成後會保存最佳成績。</p><button class="button primary" id="startQuiz">開始挑戰</button></div></div>
+        <div id="quizArea" hidden><div class="quiz-status"><span id="quizCount"></span><div><i id="quizProgress"></i></div><b id="liveScore"></b></div><article class="question-card"><p class="kicker" id="questionType">EVIDENCE CHECK</p><h3 id="questionText"></h3><div id="answerOptions" class="answer-options"></div><div id="answerFeedback" class="answer-feedback" aria-live="polite"></div></article><div class="quiz-actions"><button class="button small" id="reviewLink" hidden>回看教材</button><button class="button primary" id="nextQuestion" disabled>下一題</button></div></div>
+        <div id="quizResult" class="quiz-result" hidden></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources" tabindex="0" hidden>
+      <div class="wrap lesson-section">
+        <div class="section-head"><div><p class="section-number">07 · SOURCE DESK</p><h2>從可靠資料，繼續追問</h2></div><p>資料優先選自政府、NASA、大學工程教育與科學教育機構；英文內容已摘要為繁體中文。所有連結於 2026-08-01 查核。</p></div>
+        <div class="resource-filters"><button class="is-active" data-resource-filter="all">全部</button><button data-resource-filter="中文">中文資料</button><button data-resource-filter="English">英文資料</button></div>
+        <div class="resource-list" id="resourceList"></div>
+        <div class="teacher-desk"><div><p class="kicker">TEACHER DESK</p><h2>教師使用文件</h2><p>包含兩節課流程、材料、安全、研究問題、變因、評分規準、資料來源與測試報告。</p></div><div class="document-links"><a href="docs/lesson-plan.md">教師版教學指引 <span>MD ↗</span></a><a href="docs/references.md">完整查證來源 <span>MD ↗</span></a><a href="docs/design-spec.md">教材藍圖 <span>MD ↗</span></a><a href="docs/test-report.md">品質檢核報告 <span>MD ↗</span></a></div></div>
+        <div class="extension"><p class="kicker">NEXT QUESTIONS</p><h2>下一輪還能研究什麼？</h2><ol><li>相同細砂厚度下，倒水速度是否改變清澈度？</li><li>預先沉澱 0、5、15 分鐘，濾柱堵塞時間有何差異？</li><li>不同壓實程度的棉花，流速與結果穩定性如何？</li><li>活性碳使用多次後，顏色改善是否逐漸下降？</li><li>若把「效果」定義成單位時間得到的清澈水量，排名會改變嗎？</li><li>材料成本、可重複使用與廢棄物量要如何納入總評分？</li></ol></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lesson-nav">
+    <button id="prevTab" aria-label="上一個章節">← <span>上一站</span></button>
+    <p><strong id="currentChapter">任務基地</strong><small>自製濾水器探究 · v1.0</small></p>
+    <button id="nextTab"><span>下一站</span> →</button>
+  </footer>
+
+  <dialog id="safetyDialog">
+    <button class="dialog-close" aria-label="關閉安全說明">×</button>
+    <p class="kicker">NON-POTABLE EXPERIMENT</p><h2>看起來乾淨，不代表喝起來安全</h2><p>砂石與纖維能移除部分可見顆粒；活性碳能吸附部分分子，但不能保證移除細菌、病毒、寄生蟲、重金屬、鹽類或所有化學物。真正飲用水處理需要合適消毒、設備維護與水質檢驗。</p><strong>本教材所有水樣：實驗前後都不可飲用。</strong>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
-
