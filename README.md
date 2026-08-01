@@ -4,7 +4,7 @@
 
 - 教材網站：https://prayer168.github.io/water-filter-inquiry-lab/
 - 原始碼：https://github.com/prayer168/water-filter-inquiry-lab
-- 版本：v1.0.0
+- 版本：v1.1.0
 
 ## 學習目標
 
@@ -51,13 +51,14 @@ npm run build
 
 ## Image 2.0 原創圖片
 
-專案的三張寫實輔助圖使用內建 Image 2.0 產生，最後資產為：
+專案的九張寫實輔助圖使用內建 Image 2.0 產生，最後資產為：
 
 - `assets/images/hero-lab.webp`：有教師監督、不試喝、出水仍略混濁的濾水探究主視覺。
 - `assets/images/filter-media-atlas.webp`：十種濾材的俯視實驗桌圖鑑。
 - `assets/images/evidence-comparison.webp`：用清澈度圖卡、秒錶與量筒比較三組水樣。
+- `assets/images/applications/`：六張生活應用情境圖，涵蓋自來水廠、雨水園藝回用、咖啡沖煮、魚缸循環、露營用水與太空站回收。
 
-提示詞採 `scientific-educational` 用例，要求臺灣教室、科學合理、安全護目、無文字、無標誌、無浮水印，且不得暗示濾後水可飲用。精確流向、濾層與標籤均以程式化 SVG/CSS 呈現。
+提示詞採 `scientific-educational` 用例，要求臺灣教室或相符的真實場景、科學合理、安全操作、無文字、無標誌、無浮水印，且不得暗示濾後水可飲用。精確流向、濾層與標籤仍以程式化 SVG/CSS 呈現。
 
 ## 技術
 
@@ -74,4 +75,3 @@ HTML5、CSS3、SVG、原生 JavaScript、JSON、Vite。教材資料與程式邏�
 ## 授權
 
 程式碼採 MIT License；教材文字與原創圖片如無另行標示，採 CC BY-NC-SA 4.0。外部資料版權屬原機構，本專案僅摘要並連結來源。
-

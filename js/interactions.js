@@ -1,3 +1,10 @@
+import waterTreatmentPlant from '../assets/images/applications/water-treatment-plant.webp';
+import rainwaterGarden from '../assets/images/applications/rainwater-garden.webp';
+import coffeeFilter from '../assets/images/applications/coffee-filter.webp';
+import aquariumFilter from '../assets/images/applications/aquarium-filter.webp';
+import campWaterSafety from '../assets/images/applications/camp-water-safety.webp';
+import spaceWaterRecovery from '../assets/images/applications/space-water-recovery.webp';
+
 const svgNS = 'http://www.w3.org/2000/svg';
 const makeSvg = (name, attrs={}) => { const el=document.createElementNS(svgNS,name); Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v)); return el; };
 
@@ -69,15 +76,14 @@ export function initEvidence(){
 
 export function initApplications(){
   const apps=[
-    ['自來水廠','多重屏障','混凝、沉澱、過濾後還要消毒與檢驗；瓶裝濾柱只模擬其中一小部分。','plant'],
-    ['雨水園藝回用','先篩再沉澱','葉片與泥砂可先被攔截，但用途、儲存與在地規範仍要評估。','rain'],
-    ['咖啡沖煮','纖維篩濾','濾紙留下咖啡粉，溶解的色、味物質仍通過；這正好顯示溶解物不等於顆粒。','coffee'],
-    ['魚缸循環','物理＋生物處理','海綿攔屑，濾材表面也可能成為微生物棲地；不能直接類推為飲用水設備。','tank'],
-    ['露營用水','過濾不等於消毒','戶外濾器規格各異；不確定水源還需合適的病原體處理，化學污染水不應飲用。','camp'],
-    ['太空站回收','工程循環','NASA 以反覆設計、量測與改良思考回收水；真實系統遠比寶特瓶模型複雜。','space']
+    {title:'自來水廠',tag:'多重屏障',text:'混凝、沉澱、過濾後還要消毒與檢驗；瓶裝濾柱只模擬其中一小部分。',image:waterTreatmentPlant,alt:'工程師在自來水處理設施觀察前方較混濁的進流水與後方分隔的沉澱及處理池'},
+    {title:'雨水園藝回用',tag:'先篩再沉澱',text:'葉片與泥砂可先被攔截，但用途、儲存與在地規範仍要評估。',image:rainwaterGarden,alt:'教師與學生在雨天檢查校園雨水桶的落葉濾網、底部沉積物與園藝澆灌管線'},
+    {title:'咖啡沖煮',tag:'纖維篩濾',text:'濾紙留下咖啡粉，溶解的色、味物質仍通過；這正好顯示溶解物不等於顆粒。',image:coffeeFilter,alt:'教師示範手沖咖啡，濾紙將咖啡粉留在上方，棕色液體通過後滴入透明壺'},
+    {title:'魚缸循環',tag:'物理＋生物處理',text:'海綿攔屑，濾材表面也可能成為微生物棲地；不能直接類推為飲用水設備。',image:aquariumFilter,alt:'教師與學生觀察魚缸旁的透明循環過濾槽，槽內可見攔截碎屑的海綿與多孔陶瓷環'},
+    {title:'露營用水',tag:'過濾不等於消毒',text:'戶外濾器規格各異；不確定水源還需合適的病原體處理，化學污染水不應飲用。',image:campWaterSafety,alt:'戶外教師在溪邊用攜帶式濾器處理水樣，學生比較處理前後樣本，旁邊備有加熱用鍋具'},
+    {title:'太空站回收',tag:'工程循環',text:'太空任務以反覆設計、量測與改良回收水；真實系統遠比寶特瓶模型複雜。',image:spaceWaterRecovery,alt:'太空人檢查軌道實驗室內由多個濾筒、泵浦、感測器與密閉管線組成的水回收設備'}
   ];
-  const icons={plant:'<path d="M20 105h160M35 105V48h25v57M75 105V25h30v80M120 105V58h25v47M155 105V38h20v67"/><path d="M15 18h170"/><circle cx="48" cy="36" r="5"/><circle cx="91" cy="17" r="5"/>',rain:'<path d="M55 25c-20 0-30 13-30 28h110c0-18-13-30-32-30-8-16-38-17-48 2z"/><path d="M45 68l-8 17m36-17-8 17m36-17-8 17"/><path d="M20 105h160M55 105V88h90v17"/>',coffee:'<path d="M45 25h110l-28 62H73z"/><path d="M73 87h54M90 87v18m20-18v18M65 105h70"/><path d="M70 45h60"/>',tank:'<rect x="25" y="30" width="150" height="80" rx="8"/><path d="M25 65h150M50 28v-15h95v15"/><circle cx="75" cy="78" r="10"/><path d="M120 78c15-14 30 0 30 0s-15 14-30 0z"/>',camp:'<path d="M25 108l55-75 55 75zM80 33l55 75h45"/><path d="M140 30v60h25V30"/><path d="M145 45h15m-15 14h15m-15 14h15"/>',space:'<circle cx="100" cy="62" r="42"/><path d="M100 20v84M58 62h84M70 32c24 20 36 44 60 60M130 32c-24 20-36 44-60 60"/><circle cx="155" cy="25" r="9"/><path d="M15 112h170"/>'};
-  document.querySelector('#applicationGrid').innerHTML=apps.map(([title,tag,text,key])=>`<article class="app-card"><div class="app-visual"><svg viewBox="0 0 200 130" role="img" aria-label="${title}示意圖"><g fill="none" stroke="#204c3f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${icons[key]}</g></svg></div><div class="app-body"><span>${tag}</span><h3>${title}</h3><p>${text}</p><details><summary>想一想</summary>這個情境的目標污染物、量測方式與安全標準，和課堂泥水模型有何不同？</details></div></article>`).join('');
+  document.querySelector('#applicationGrid').innerHTML=apps.map(app=>`<article class="app-card"><div class="app-visual"><img src="${app.image}" alt="${app.alt}" width="1536" height="1024" loading="lazy"></div><div class="app-body"><span>${app.tag}</span><h3>${app.title}</h3><p>${app.text}</p><details><summary>想一想</summary>這個情境的目標污染物、量測方式與安全標準，和課堂泥水模型有何不同？</details></div></article>`).join('');
 }
 
 export function initResources(resources){

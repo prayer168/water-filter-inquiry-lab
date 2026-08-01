@@ -1,13 +1,13 @@
 # 品質檢核報告
 
-檢核日期：2026-08-01　版本：v1.0.0
+檢核日期：2026-08-01　版本：v1.1.0
 
 ## 自動建置
 
 - `npm install`：通過；0 個已知套件漏洞。
 - `node --check`：`app.js`、`navigation.js`、`interactions.js`、`quiz.js` 通過。
 - JSON：`content.json`、`quiz.json`、`resources.json` 可解析。
-- `npm run build`：Vite 7.3.6 建置成功，10 個模組完成轉換。
+- `npm run build`：Vite 7.3.6 建置成功，19 個模組完成轉換；六張生活應用 WebP 均進入正式輸出。
 - GitHub Pages 公開網址驗證時發現原本的執行期 JSON 路徑未進入 `dist`；已改為建置期匯入 JSON，重新建置與部署後確認互動資料載入。
 
 ## 桌機瀏覽器
@@ -17,7 +17,7 @@
 - 八頁籤、上一站／下一站與進度條正常。
 - 原理控制 3 個、濾材卡與表格各 10 筆、配置預設 5 層。
 - 證據紀錄表 3 組 × 3 次，共 9 筆。
-- 生活應用 6 卡與 6 個專屬 SVG 一致。
+- 生活應用 6 卡與 6 張 Image 2.0 圖片一致；0 個舊 SVG、6 張圖片皆完成載入且自然寬度為 1536px。
 - 自主學習 14 筆，教師文件 4 筆。
 - 闖關 10 題完成測試；10/10 結果與 localStorage 最佳成績 10 正常。
 
@@ -25,14 +25,14 @@
 
 - 390 × 844：文件寬度與 viewport 都是 390px，無水平溢出。
 - 頁籤可橫向捲動並保持目前章節可見。
-- 生活應用卡改為單欄；SVG 完整落在卡片內，未裁切、未被底部導覽遮住。
+- 生活應用卡改為單欄；3:2 圖片完整落在卡片內，未變形、未被底部導覽遮住。
 - 切換頁籤會回到章節頂端；已修正 sticky 頁籤造成的舊捲動位置殘留。
-- 截圖：`desktop-home.png`、`desktop-builder-fixed.png`、`mobile-applications.png`。
+- 截圖：`desktop-home.png`、`desktop-builder-fixed.png`、`desktop-applications-image2.png`、`mobile-applications-image2.png`。
 
 ## 無障礙基本檢核
 
 - `html` 語言為 `zh-Hant-TW`。
-- 0 個重複 ID、0 張缺少 `alt` 的圖片、0 個無名稱按鈕。
+- 0 個重複 ID、0 張生活應用圖片缺少 `alt`、0 個無名稱按鈕。
 - 所有新視窗外部連結均有 `rel="noopener"`。
 - 頁籤使用 `tablist`／`tab`／`tabpanel`、方向鍵、Home、End 鍵操作。
 - 動畫提供播放、暫停、重播，並支援 `prefers-reduced-motion`。
