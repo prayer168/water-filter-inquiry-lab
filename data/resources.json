@@ -1,0 +1,143 @@
+[
+  {
+    "language": "中文",
+    "title": "自來水水源及淨水處理",
+    "institution": "臺北自來水事業處",
+    "grade": "國小高年級以上／教師",
+    "description": "以實際淨水場流程說明攔污、混凝、沉澱、快濾與消毒；可用來比較課堂模型與正式淨水系統。",
+    "borrow": "借鑑分階段流程圖、快濾床結構與反沖洗概念。",
+    "date": "頁面更新日期未明確標示；2026-08-01 查核",
+    "url": "https://www.water.gov.taipei/cp.aspx?n=0E5CC03B9D879F8B"
+  },
+  {
+    "language": "中文",
+    "title": "優質食水：STEAM 活動—DIY 濾水器",
+    "institution": "香港特別行政區政府水務署",
+    "grade": "中學／可調整至國小高年級",
+    "description": "學生選擇濾紙、棉花、粗細砂、卵石與活性碳，設計、測試並比較不同濾水器。",
+    "borrow": "借鑑材料站、分組設計與效能比較任務。",
+    "date": "頁面日期未標示；2026-08-01 查核",
+    "url": "https://www.waterconservation.gov.hk/tc/at-school/secondary-school/quality-water/steam-activity/index.html"
+  },
+  {
+    "language": "中文",
+    "title": "你今天過濾了嗎？簡易汙水濾淨器",
+    "institution": "教育部教育大市集",
+    "grade": "國小三至六年級",
+    "description": "探討濾材、分層、外形、長度與流速等變因，並比較處理前後水樣。",
+    "borrow": "借鑑多變因清單，但本教材改為一次只改一項的公平測試。",
+    "date": "2013-11-23 上傳；2026-08-01 查核",
+    "url": "https://market.cloud.edu.tw/resources/web/1685701"
+  },
+  {
+    "language": "中文",
+    "title": "沒水怎麼辦～廢水能喝嗎？自製濾水",
+    "institution": "臺南市政府教育局資訊中心校園網站",
+    "grade": "國小四年級",
+    "description": "以碎布、砂與不同尺寸石材製作倒置瓶濾水器，利用手電筒比較水中雜質。",
+    "borrow": "借鑑前後對照與手電筒觀察；本教材強化『不可飲用』與模擬污水限制。",
+    "date": "頁面日期未標示；2026-08-01 查核",
+    "url": "https://class.tn.edu.tw/modules/tad_web/page.php?PageID=28601&WebID=718"
+  },
+  {
+    "language": "中文",
+    "title": "淨水器的維護管理注意事項",
+    "institution": "環境部飲用水全球資訊網",
+    "grade": "國中以上／教師",
+    "description": "介紹常見淨水器類型、認證、濾心壽命、定期更換與維護的重要性。",
+    "borrow": "用來說明吸附容量有限、設備需維護，不能只看外觀判定安全。",
+    "date": "頁面日期未標示；2026-08-01 查核",
+    "url": "https://dwsiot.moenv.gov.tw/articlepage_other/34"
+  },
+  {
+    "language": "中文",
+    "title": "淨水處理流程",
+    "institution": "金門縣自來水廠",
+    "grade": "國小高年級以上",
+    "description": "以水庫、膠凝池、浮除池、快濾池、慢濾池與清水池呈現公共供水流程。",
+    "borrow": "可作為課堂瓶裝濾柱與大型工程系統的尺度比較。",
+    "date": "頁面日期未標示；2026-08-01 查核",
+    "url": "https://water.kinmen.gov.tw/cp.aspx?n=ff66d4bba92c3245"
+  },
+  {
+    "language": "English",
+    "title": "Make a Water Filter",
+    "institution": "NASA Jet Propulsion Laboratory Education",
+    "grade": "Grades 5–12",
+    "description": "以工程設計循環製作、測試、記錄並改良濾水器，明確提醒外觀乾淨仍不可飲用。",
+    "borrow": "借鑑迭代設計、比較多個方案與安全警語。",
+    "date": "Updated 2024-10-11；2026-08-01 查核",
+    "url": "https://www.jpl.nasa.gov/edu/resources/project/make-a-water-filter/"
+  },
+  {
+    "language": "English",
+    "title": "Water Filtration Challenge",
+    "institution": "NASA Jet Propulsion Laboratory Education",
+    "grade": "Grades 3–8（可延伸）",
+    "description": "學生以相同污水測試多種濾材，量測 pH、導電度、顏色與氣味，再依班級資料改良設計。",
+    "borrow": "借鑑全班共享證據、控制試驗與第二輪改良。",
+    "date": "頁面日期未明確標示；2026-08-01 查核",
+    "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/water-filtration-challenge/"
+  },
+  {
+    "language": "English",
+    "title": "Water Filtration Project: Make Your Own Water Filters",
+    "institution": "TeachEngineering / University of Colorado Boulder",
+    "grade": "Grade 4（3–5）",
+    "description": "把清澈度、材料成本與效率納入工程設計限制，並強調完整處理包含沉澱、過濾與消毒。",
+    "borrow": "借鑑成本表、團隊設計與效能規準。",
+    "date": "Last modified 2019-10-24；2026-08-01 查核",
+    "url": "https://www.teachengineering.org/activities/view/water_filtration"
+  },
+  {
+    "language": "English",
+    "title": "Water Filtration (Grades 4–8)",
+    "institution": "United States Environmental Protection Agency",
+    "grade": "Grades 4–8",
+    "description": "示範混凝、沉澱與砂礫過濾，並說明未進行消毒的課堂水樣不適合飲用。",
+    "borrow": "借鑑靜置時間觀察、細砂—粗砂—卵石濾柱與處理前後比較。",
+    "date": "頁面日期未標示；2026-08-01 查核",
+    "url": "https://www3.epa.gov/safewater/kids/grades_4-8_water_filtration.html"
+  },
+  {
+    "language": "English",
+    "title": "Turbidity and Water",
+    "institution": "U.S. Geological Survey Water Science School",
+    "grade": "國小高年級以上／教師",
+    "description": "說明濁度是液體相對清澈程度的光學量，懸浮顆粒會散射光。",
+    "borrow": "作為自製清澈度尺與『透明不等於安全』的科學依據。",
+    "date": "2018-06-06；2026-08-01 查核",
+    "url": "https://www.usgs.gov/water-science-school/science/turbidity-and-water"
+  },
+  {
+    "language": "English",
+    "title": "Overview of Drinking Water Treatment Technologies",
+    "institution": "United States Environmental Protection Agency",
+    "grade": "教師／國中延伸",
+    "description": "說明顆粒活性碳具有高內部表面積、能吸附特定污染物，但容量會耗盡且污染物之間會競爭。",
+    "borrow": "用來區分活性碳吸附與砂石篩濾，並討論濾材壽命。",
+    "date": "Updated 2026；2026-08-01 查核",
+    "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+  },
+  {
+    "language": "English",
+    "title": "About Choosing Home Water Filters",
+    "institution": "U.S. Centers for Disease Control and Prevention",
+    "grade": "教師／家庭延伸",
+    "description": "提醒不同濾水器針對的污染物不同，選擇前需知道水中問題與產品認證。",
+    "borrow": "用來建立『沒有一種濾材能處理所有污染』的觀念。",
+    "date": "頁面持續更新；2026-08-01 查核",
+    "url": "https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html"
+  },
+  {
+    "language": "English",
+    "title": "Treatment Methods and Performance—Activated Carbon Adsorption",
+    "institution": "World Health Organization",
+    "grade": "教師專業閱讀",
+    "description": "說明活性碳由含碳材料活化而成，具有大表面積；不同活性碳對污染物親和力不同。",
+    "borrow": "作為活性碳特性、選擇性與容量限制的教師背景資料。",
+    "date": "2022 文件；2026-08-01 查核",
+    "url": "https://cdn.who.int/media/docs/default-source/wash-documents/water-safety-and-quality/chemical-fact-sheets-2022/treatment-methods-and-performance.pdf"
+  }
+]
+

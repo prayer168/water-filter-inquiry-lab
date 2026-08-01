@@ -1,0 +1,207 @@
+{
+  "principles": [
+    {
+      "name": "沉澱",
+      "english": "SEDIMENTATION",
+      "summary": "先讓水靜置，較大、較重的懸浮顆粒受重力作用沉到容器底部，再小心取上層水。",
+      "can": "減少泥砂與大型懸浮物，降低濾材堵塞速度。",
+      "cannot": "不能可靠去除病原體、溶解鹽類或多數溶解性化學物。",
+      "visual": "settling"
+    },
+    {
+      "name": "篩濾",
+      "english": "STRAINING & DEPTH FILTRATION",
+      "summary": "水流穿過材料孔隙，較大的顆粒被表面或彎曲通道攔住；細砂通常比礫石能攔下更細顆粒。",
+      "can": "改善可見碎屑、懸浮固體與部分濁度。",
+      "cannot": "清澈不等於無菌，也不代表溶解污染物已消失。",
+      "visual": "screening"
+    },
+    {
+      "name": "吸附",
+      "english": "ADSORPTION",
+      "summary": "某些分子附著在活性碳巨大的多孔表面；這是『吸附』，不是被吸進材料內部的『吸收』。",
+      "can": "依碳材種類與水質，降低部分味道、氣味及可被吸附的有機物。",
+      "cannot": "容量有限、會飽和；不保證移除微生物、鹽類、所有金屬或所有化學物。",
+      "visual": "adsorption"
+    }
+  ],
+  "materials": [
+    {
+      "id": "stone",
+      "name": "石頭",
+      "scale": "約 20–50 mm（課堂可統一尺寸）",
+      "porosity": "顆粒間孔隙很大",
+      "role": "分散水流、擋住很大的葉片與碎屑",
+      "strength": "便宜、通水快、不易堵塞",
+      "limit": "幾乎攔不住細泥；表面若未洗淨會增加濁度",
+      "cost": 1,
+      "clarity": 1,
+      "flow": 5,
+      "color": "#69715d"
+    },
+    {
+      "id": "gravel",
+      "name": "礫石",
+      "scale": "約 5–20 mm",
+      "porosity": "顆粒間孔隙大",
+      "role": "攔截大顆粒、支撐細濾材、幫助配水",
+      "strength": "流速快、結構穩定",
+      "limit": "對細小懸浮物效果有限；需先沖洗",
+      "cost": 1,
+      "clarity": 2,
+      "flow": 5,
+      "color": "#9b8062"
+    },
+    {
+      "id": "coarseSand",
+      "name": "粗砂",
+      "scale": "約 0.5–2 mm（依材料而異）",
+      "porosity": "中等彎曲通道",
+      "role": "攔截中小型懸浮顆粒，銜接礫石與細砂",
+      "strength": "兼顧流速與清澈度",
+      "limit": "尺寸不一致會影響公平比較；需洗到出水不再混濁",
+      "cost": 1,
+      "clarity": 3,
+      "flow": 4,
+      "color": "#b58a55"
+    },
+    {
+      "id": "fineSand",
+      "name": "細砂",
+      "scale": "約 0.1–0.5 mm（依材料而異）",
+      "porosity": "較小、路徑較曲折",
+      "role": "深層攔截較細懸浮顆粒，降低可見濁度",
+      "strength": "通常比粗粒材料更能改善透明度",
+      "limit": "層越厚通常流速越慢，也較容易堵塞；不能當作消毒",
+      "cost": 1,
+      "clarity": 5,
+      "flow": 2,
+      "color": "#d5bd89"
+    },
+    {
+      "id": "cotton",
+      "name": "棉花",
+      "scale": "纖維網，孔隙不固定",
+      "porosity": "受壓縮程度影響很大",
+      "role": "末端攔截細屑、固定顆粒濾材",
+      "strength": "容易取得、可觀察截留物",
+      "limit": "壓太緊可能堵塞；鬆緊難標準化，不利精確比較",
+      "cost": 1,
+      "clarity": 3,
+      "flow": 2,
+      "color": "#f1eee5"
+    },
+    {
+      "id": "nonwoven",
+      "name": "不織布",
+      "scale": "纖維孔隙依產品而異",
+      "porosity": "較均勻但無固定通用孔徑",
+      "role": "隔開濾材、作為出口支撐與細屑屏障",
+      "strength": "裁切方便、重複性通常優於手塞棉花",
+      "limit": "不同產品差異很大；不可把一般不織布當成醫療或飲水認證濾膜",
+      "cost": 2,
+      "clarity": 3,
+      "flow": 3,
+      "color": "#dfe4dd"
+    },
+    {
+      "id": "coffee",
+      "name": "咖啡濾紙",
+      "scale": "纖維微孔，品牌與濕潤狀態不同",
+      "porosity": "細且相對均勻",
+      "role": "出口端攔截細砂、碳粉與可見細屑",
+      "strength": "便宜、容易更換、便於一致化",
+      "limit": "流速慢、容易破；無法證明已去除病原體或溶解物",
+      "cost": 1,
+      "clarity": 4,
+      "flow": 2,
+      "color": "#ede3d0"
+    },
+    {
+      "id": "sponge",
+      "name": "海綿",
+      "scale": "孔洞大小依產品而異",
+      "porosity": "大孔、可壓縮",
+      "role": "粗略攔截、支撐與分散水流",
+      "strength": "可裁切、流速快",
+      "limit": "孔洞常太大，清潔不易；不可使用含清潔劑或抗菌藥劑的海綿",
+      "cost": 2,
+      "clarity": 2,
+      "flow": 4,
+      "color": "#d7a844"
+    },
+    {
+      "id": "charcoal",
+      "name": "一般木炭",
+      "scale": "塊狀或碎粒，孔隙未標準化",
+      "porosity": "有孔但表面積與品質差異大",
+      "role": "可作為『與活性碳比較』的實驗材料",
+      "strength": "可提出材料處理方式如何影響效果的問題",
+      "limit": "不是活性碳；灰分與黑粉可能污染水，來源不明者不使用",
+      "cost": 1,
+      "clarity": 1,
+      "flow": 4,
+      "color": "#34332e"
+    },
+    {
+      "id": "activatedCarbon",
+      "name": "顆粒活性碳",
+      "scale": "常見為毫米級顆粒，內部有大量微孔",
+      "porosity": "極高內部表面積",
+      "role": "吸附部分造成色、味、氣味的有機分子",
+      "strength": "吸附能力通常比未活化木炭穩定且可說明",
+      "limit": "需先沖洗；容量會飽和；不是消毒材料，也不保證去除所有污染物",
+      "cost": 3,
+      "clarity": 3,
+      "flow": 3,
+      "color": "#161b18"
+    }
+  ],
+  "configurations": [
+    {
+      "id": "starter",
+      "name": "建議起始組",
+      "flowDirection": "由上往下",
+      "layers": ["礫石 4 cm", "粗砂 4 cm", "細砂 6 cm", "顆粒活性碳 3 cm", "咖啡濾紙 2 層"],
+      "why": "先分散水流，再逐步縮小通道；活性碳靠近末段吸附部分色味，出口濾紙攔住細砂與碳粉。這只是可比較的起點，不是唯一最佳答案。",
+      "clarity": 4,
+      "speed": 3,
+      "cost": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "fast",
+      "name": "快速通水組",
+      "flowDirection": "由上往下",
+      "layers": ["石頭 5 cm", "礫石 7 cm", "粗砂 5 cm", "不織布 1 層"],
+      "why": "大孔隙材料多，流速較快但細小懸浮物容易通過，適合作為速度與清澈度取捨的對照。",
+      "clarity": 2,
+      "speed": 5,
+      "cost": 1,
+      "difficulty": 1
+    },
+    {
+      "id": "fine",
+      "name": "細緻慢流組",
+      "flowDirection": "由上往下",
+      "layers": ["礫石 3 cm", "粗砂 3 cm", "細砂 10 cm", "顆粒活性碳 4 cm", "咖啡濾紙 2 層"],
+      "why": "增加細砂與吸附介質的接觸，但可能明顯變慢或堵塞；需要記錄出水量與時間，不能只看透明度。",
+      "clarity": 5,
+      "speed": 1,
+      "cost": 4,
+      "difficulty": 3
+    },
+    {
+      "id": "control",
+      "name": "空瓶對照組",
+      "flowDirection": "由上往下",
+      "layers": ["只放出口濾紙，不放顆粒濾材"],
+      "why": "用來判斷多層濾材是否真的比容器與出口濾紙本身更有效。",
+      "clarity": 1,
+      "speed": 4,
+      "cost": 1,
+      "difficulty": 1
+    }
+  ]
+}
+
