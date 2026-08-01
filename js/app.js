@@ -2,11 +2,11 @@ import {initNavigation} from './navigation.js';
 import {initProgress} from './progress.js';
 import {initPrinciples,initMaterials,initBuilder,initEvidence,initApplications,initResources} from './interactions.js';
 import {initQuiz} from './quiz.js';
-
-async function loadJson(path){const response=await fetch(path);if(!response.ok)throw new Error(`無法載入 ${path}`);return response.json()}
+import content from '../data/content.json';
+import questions from '../data/quiz.json';
+import resources from '../data/resources.json';
 
 async function main(){
-  const [content,questions,resources]=await Promise.all([loadJson('data/content.json'),loadJson('data/quiz.json'),loadJson('data/resources.json')]);
   const progress=initProgress();
   let navigation;
   navigation=initNavigation(id=>progress.visit(id));
@@ -14,5 +14,4 @@ async function main(){
   initQuiz(questions,{onBest:progress.setBest,onReview:key=>navigation.showById(({principles:'principles',materials:'materials',experiment:'evidence',evidence:'evidence',safety:'mission'})[key]||'principles')});
   const dialog=document.querySelector('#safetyDialog');document.querySelector('#openSafety').addEventListener('click',()=>dialog.showModal());document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
 }
-main().catch(error=>{console.error(error);document.querySelector('#lesson').insertAdjacentHTML('afterbegin',`<div class="wrap" style="padding:20px;background:#f4e3d7"><strong>教材資料載入失敗：</strong>${error.message}。請以本機伺服器或 GitHub Pages 開啟。</div>`)});
-
+main().catch(error=>{console.error(error);document.querySelector('#lesson').insertAdjacentHTML('afterbegin',`<div class="wrap" style="padding:20px;background:#f4e3d7"><strong>教材資料載入失敗：</strong>${error.message}</div>`)});

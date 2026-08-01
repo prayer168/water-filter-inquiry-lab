@@ -8,6 +8,7 @@
 - `node --check`：`app.js`、`navigation.js`、`interactions.js`、`quiz.js` 通過。
 - JSON：`content.json`、`quiz.json`、`resources.json` 可解析。
 - `npm run build`：Vite 7.3.6 建置成功，10 個模組完成轉換。
+- GitHub Pages 公開網址驗證時發現原本的執行期 JSON 路徑未進入 `dist`；已改為建置期匯入 JSON，重新建置與部署後確認互動資料載入。
 
 ## 桌機瀏覽器
 
@@ -51,4 +52,3 @@
 - 配置分數是形成假設用的教學模型，不是實測 NTU 或飲用水安全判定；網站已在模擬器旁明示。
 - Markdown 教師文件在瀏覽器可能以純文字呈現；下載或於 GitHub 閱讀可獲得完整排版。
 - 外部網站可能日後改版，建議教師授課前再次確認連結。
-
